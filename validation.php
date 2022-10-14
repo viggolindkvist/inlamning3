@@ -14,6 +14,7 @@ if (isset($_SESSION['user_name'])) {
             if ($check !== false) {
                 echo "File is an image - " . $check["mime"] . ".";
                 $uploadOk = 1;
+                session_destroy();
             } else {
                 echo "File is not an image.";
                 $uploadOk = 0;
